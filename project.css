@@ -1,0 +1,213 @@
+/* Reset Margin & Padding dasar agar konsisten di semua browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #111;
+  color: #fff;
+}
+
+/* 1. Latar Belakang Hero Section */
+.hero-container {
+  width: 100vw;
+  height: 100vh;
+  /* Lapisan warna biru-hitam transparan di atas gambar poster */
+  background: 
+    linear-gradient(
+      180deg, 
+      rgba(7, 22, 56, 0.515) 0%,   /* Warna biru tua transparan di bagian atas */
+      rgba(5, 24, 62, 0.547) 100%  /* Warna biru kehitaman pekat di bagian bawah */
+    ),
+    url('../image/bgmovies.png'); /* Path gambar latar belakang kamu */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 2. Style Header & Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  color: #7b2cbf; /* Warna aksen ungu pada kata 'box' */
+  font-style: normal;
+}
+
+.btn-login-nav {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-login-nav:hover {
+  text-decoration: underline;
+}
+
+/* 3. Style Teks Utama (Hero Content) */
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 600px;
+}
+
+.hero-content h1 span {
+  color: #d00000; /* Warna aksen merah pada titik kalimat */
+}
+
+/* 4. Style Layer Overlay Modal (Latar Hitam Transparan) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Secara bawaan disembunyikan */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Class aktif ketika modal dipanggil melalui JavaScript */
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 5. Style Kartu Modal Login */
+.modal-card {
+  position: relative;
+  background: rgba(30, 30, 30, 0.92);
+  backdrop-filter: blur(8px); /* Efek kaca buram (Glassmorphism) */
+  width: 360px;
+  padding: 32px 28px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Tombol Tutup (X) */
+.btn-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #fff;
+  color: #000;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+/* 6. Style Input Form */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  background: #d9d9d9;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.95rem;
+  outline: none;
+  color: #000;
+}
+
+/* Footer Form & Tombol Submit */
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 12px;
+}
+
+.signup-text {
+  font-size: 0.72rem;
+  color: #aaa;
+  max-width: 180px;
+  line-height: 1.3;
+}
+
+.signup-text a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.btn-enter {
+  background: #d9d9d9;
+  color: #000;
+  border: none;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.btn-enter:hover {
+  background: #fff;
+}
